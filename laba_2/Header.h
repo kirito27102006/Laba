@@ -10,7 +10,15 @@ class Matrix {
   Matrix(int lines, int columns);
   ~Matrix();
   Matrix(const Matrix& other);
-  friend Matrix operator+(const Matrix& first, const Matrix& second);
+  friend Matrix operator+(const Matrix& first, const Matrix& second) {
+      Matrix temp(first.lines, first.columns);
+      for (int i = 0; i < first.lines; i++) {
+          for (int j = 0; j < first.columns; j++) {
+              temp.matrix[i][j] = first.matrix[i][j] + second.matrix[i][j];
+          }
+      }
+      return temp;
+  }
   friend std::ostream& operator<<(std::ostream& os, const Matrix& mat) {
       for (int i = 0; i < mat.lines; i++) {
           for (int j = 0; j < mat.columns; j++) {

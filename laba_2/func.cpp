@@ -33,15 +33,5 @@ Matrix::Matrix(const Matrix& other)
   }
 }
 
-Matrix operator+(const Matrix& first, const Matrix& second) {
-    Matrix temp(first.lines, first.columns);
-    for (int i = 0; i < first.lines; i++) {
-        for (int j = 0; j < first.columns; j++) {
-            temp.matrix[i][j] = first.matrix[i][j] + second.matrix[i][j];
-        }
-    }
-    return temp;
-}
-
 
 
