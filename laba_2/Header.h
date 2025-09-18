@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 class Matrix {
  private:
   int lines = 0;
@@ -13,6 +11,6 @@ class Matrix {
   ~Matrix();
   Matrix(const Matrix& other);
   friend Matrix operator+(const Matrix& first, const Matrix& second);
-  friend ostream& operator<<(ostream& os, const Matrix& mat);
-  friend istream& operator>>(istream& is, const Matrix& mat);
+  friend std::ostream& operator<<(std::ostream& os, const Matrix& mat);
+  friend std::istream& operator>>(std::istream& is, const Matrix& mat);
 };
