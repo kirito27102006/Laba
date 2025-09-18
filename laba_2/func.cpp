@@ -34,31 +34,31 @@ Matrix::Matrix(const Matrix& other)
 }
 
 Matrix operator+(const Matrix& first, const Matrix& second) {
-  Matrix temp(first.lines, first.columns);
-  for (int i = 0; i < first.lines; i++) {
-    for (int j = 0; j < first.columns; j++) {
-      temp.matrix[i][j] = first.matrix[i][j] + second.matrix[i][j];
+    Matrix temp(first.lines, first.columns);
+    for (int i = 0; i < first.lines; i++) {
+        for (int j = 0; j < first.columns; j++) {
+            temp.matrix[i][j] = first.matrix[i][j] + second.matrix[i][j];
+        }
     }
-  }
-  return temp;
+    return temp;
 }
 
-ostream& operator<<(ostream& os, const Matrix& mat) {
-  for (int i = 0; i < mat.lines; i++) {
-    for (int j = 0; j < mat.columns; j++) {
-      os << mat.matrix[i][j] << " ";
+std::ostream& operator<<(std::ostream& os, const Matrix& mat) {
+    for (int i = 0; i < mat.lines; i++) {
+        for (int j = 0; j < mat.columns; j++) {
+            os << mat.matrix[i][j] << " ";
+        }
+        os << "\n";
     }
-    os << "\n";
-  }
-  return os;
+    return os;
 }
 
-istream& operator>>(istream& is, const Matrix& mat) {
-  cout << "¬ведите элементы матрицы " << ":\n";
-  for (int i = 0; i < mat.lines; i++) {
-    for (int j = 0; j < mat.columns; j++) {
-      is >> mat.matrix[i][j];
+std::istream& operator>>(std::istream& is, const Matrix& mat) {
+    std::cout << "¬ведите элементы матрицы " << mat.lines << "x" << mat.columns << ":\n";
+    for (int i = 0; i < mat.lines; i++) {
+        for (int j = 0; j < mat.columns; j++) {
+            is >> mat.matrix[i][j];
+        }
     }
-  }
-  return is;
+    return is;
 }
