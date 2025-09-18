@@ -43,22 +43,5 @@ Matrix operator+(const Matrix& first, const Matrix& second) {
     return temp;
 }
 
-std::ostream& operator<<(std::ostream& os, const Matrix& mat) {
-    for (int i = 0; i < mat.lines; i++) {
-        for (int j = 0; j < mat.columns; j++) {
-            os << mat.matrix[i][j] << " ";
-        }
-        os << "\n";
-    }
-    return os;
-}
 
-std::istream& operator>>(std::istream& is, const Matrix& mat) {
-    std::cout << "¬ведите элементы матрицы " << mat.lines << "x" << mat.columns << ":\n";
-    for (int i = 0; i < mat.lines; i++) {
-        for (int j = 0; j < mat.columns; j++) {
-            is >> mat.matrix[i][j];
-        }
-    }
-    return is;
-}
+
