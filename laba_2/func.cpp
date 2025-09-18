@@ -20,8 +20,7 @@ Matrix::~Matrix() {
   }
 }
 
-Matrix::Matrix(const Matrix& other)
-    : lines(other.lines), columns(other.columns) {
+Matrix::Matrix(const Matrix& other) : lines(other.lines), columns(other.columns) {
   if (lines > 0 && columns > 0) {
     matrix = new double*[lines];
     for (int i = 0; i < lines; i++) {
