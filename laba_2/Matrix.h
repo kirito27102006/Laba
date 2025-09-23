@@ -38,6 +38,8 @@ class Matrix {
     }
     return is;
   }
+
+  Matrix& operator=(const Matrix& other) = delete;
 };
 
 int getLines();
