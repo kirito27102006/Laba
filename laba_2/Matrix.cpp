@@ -54,7 +54,7 @@ Matrix createMatrix(const std::string& matrixName) {
   return Matrix(lines, columns);
 }
 
-void fillMatrix(Matrix& matrix) { 
+void fillMatrix(const Matrix& matrix) { 
     std::cin >> matrix; 
 }
 

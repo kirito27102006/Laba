@@ -43,5 +43,5 @@ class Matrix {
 int getLines();
 int getColumns();
 Matrix createMatrix(const std::string& matrixName);
-void fillMatrix(Matrix& matrix);
+void fillMatrix(const Matrix& matrix);
 void displayMatrix(const Matrix& matrix, const std::string& message);
