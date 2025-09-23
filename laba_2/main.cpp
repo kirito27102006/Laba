@@ -11,7 +11,7 @@ int main() {
     if (choice == 1) {
       Matrix firstMatrix = createMatrix("первой");
       fillMatrix(firstMatrix);
-      displayMatrix(firstMatrix, "Ваша матрица:");
+      displayMatrix(firstMatrix, "Ваша матрица: ");
       Matrix secondMatrix = createMatrix("второй");
       fillMatrix(secondMatrix);
       displayMatrix(secondMatrix, "Ваша матрица:");
