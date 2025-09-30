@@ -39,6 +39,14 @@ class Matrix {
     return is;
   }
 
+  int getLines() const { 
+      return lines; 
+  }
+  int getColumns() const { 
+      return columns; 
+  }
+
+
   Matrix& operator=(const Matrix& other) = delete;
 };
 
@@ -47,3 +55,4 @@ int getColumns();
 Matrix createMatrix(const std::string& matrixName);
 void fillMatrix(const Matrix& matrix);
 void displayMatrix(const Matrix& matrix, const std::string& message);
+Matrix createMatrixWithSize(const std::string& matrixName, int lines, int columns);

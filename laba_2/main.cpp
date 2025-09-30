@@ -12,7 +12,7 @@ int main() {
       Matrix firstMatrix = createMatrix("первой");
       fillMatrix(firstMatrix);
       displayMatrix(firstMatrix, "Ваша матрица: ");
-      Matrix secondMatrix = createMatrix("второй");
+      Matrix secondMatrix = createMatrixWithSize("второй", firstMatrix.getLines(), firstMatrix.getColumns());
       fillMatrix(secondMatrix); 
       displayMatrix(secondMatrix, "Ваша матрица:");
       cout << "Результат сложения матриц: " << endl;

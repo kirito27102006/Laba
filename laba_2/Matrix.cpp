@@ -62,3 +62,9 @@ void displayMatrix(const Matrix& matrix, const std::string& message) {
   std::cout << message << std::endl;
   std::cout << matrix;
 }
+
+Matrix createMatrixWithSize(const std::string& matrixName, int lines, int columns) {
+    std::cout << "Заполнение " << matrixName << " матрицы" << std::endl;
+    std::cout << "Размер матрицы: " << lines << "x" << columns << std::endl;
+    return Matrix(lines, columns);
+}
