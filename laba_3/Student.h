@@ -8,7 +8,7 @@ private:
 public:
     Student();
     std::string getName() const;
-    void setName(std::string const& name);
+    void setName(std::string name);
     int getYearOfBirth() const;
     void setYearOfBirth(int yearOfBirth);
     double getPoint() const;

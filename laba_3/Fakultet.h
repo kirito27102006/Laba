@@ -6,8 +6,8 @@ private:
     std::string nameFakultet;
 public:
     Fakultet();
-    std::string getNameFakultet();
-    void setNameFakultet(std::string const& nameOfFakultet);
+    std::string getNameFakultet() const;
+    void setNameFakultet(std::string nameOfFakultet);
     virtual void info();
 };
 

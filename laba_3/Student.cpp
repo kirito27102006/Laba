@@ -1,14 +1,11 @@
 #include "Student.h"
 
-Student::Student() {
-    this->name = "UNDEFIND";
-    this->yearOfBirth = 0;
-    this->point = 0;
+Student::Student() : name("UNDEFIND"), yearOfBirth(0), point(0) {
 }
 std::string Student::getName() const {
     return this->name;
 }
-void Student::setName(std::string const& fio) {
+void Student::setName(std::string fio) {
     this->name = fio;
 }
 int Student::getYearOfBirth() const {
