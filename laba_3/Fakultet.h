@@ -1,15 +1,13 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 class Fakultet {
 private:
-    string nameFakultet;
+    std::string nameFakultet;
 public:
     Fakultet();
-    string getNameFakultet();
-    void setNameFakultet(string nameFakultet);
+    std::string getNameFakultet();
+    void setNameFakultet(std::string const& nameOfFakultet);
     virtual void info();
 };
 

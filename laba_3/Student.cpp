@@ -1,27 +1,30 @@
 #include "Student.h"
 
-Student::Student() :name("UNDEFIND"), yearOfBirth(0), point(0) {
+Student::Student() {
+    this->name = "UNDEFIND";
+    this->yearOfBirth = 0;
+    this->point = 0;
 }
-string Student::getName() {
+std::string Student::getName() const {
     return this->name;
 }
-void Student::setName(string name) {
-    this->name = name;
+void Student::setName(std::string const& fio) {
+    this->name = fio;
 }
-int Student::getYearOfBirth() {
+int Student::getYearOfBirth() const {
     return this->yearOfBirth;
 }
-void Student::setYearOfBirth(int yearOfBirth) {
-    this->yearOfBirth = yearOfBirth;
+void Student::setYearOfBirth(int yearBirth) {
+    this->yearOfBirth = yearBirth;
 }
-double Student::getPoint() {
+double Student::getPoint() const {
     return this->point;
 }
-void Student::setPoint(double point) {
-    this->point = point;
+void Student::setPoint(double pointOfSemestr) {
+    this->point = pointOfSemestr;
 }
 void Student::info() {
-    cout << "ФИО: " << getName() << endl;
-    cout << "Год рождения: " << getYearOfBirth() << endl;
-    cout << "Средний балл: " << getPoint() << endl;
+    std::cout << "ФИО: " << getName() << std::endl;
+    std::cout << "Год рождения: " << getYearOfBirth() << std::endl;
+    std::cout << "Средний балл: " << getPoint() << std::endl;
 }

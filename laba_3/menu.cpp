@@ -7,18 +7,19 @@ void printInfo(Fakultet* fakultet) {
 void addStudent(Fakultet& fakultet, Student& student) {
     int year;
     double point;
-    string nameFakultet;
-    string name;
-    cout << "Введите факультет: ";
-    getline(cin, nameFakultet);
+    std::string nameFakultet;
+    std::string name;
+    std::cout << "Введите факультет: ";
+    std::cin.ignore();
+    getline(std::cin, nameFakultet);
     fakultet.setNameFakultet(nameFakultet);
-    cout << "ФИО студента: ";
-    getline(cin, name);
+    std::cout << "ФИО студента: ";
+    getline(std::cin, name);
     student.setName(name);
-    cout << "Введите год рождения студента: ";
-    cin >> year;
+    std::cout << "Введите год рождения студента: ";
+    std::cin >> year;
     student.setYearOfBirth(year);
-    cout << "Введите средний балл за последнюю сессию: ";
-    cin >> point;
+    std::cout << "Введите средний балл за последнюю сессию: ";
+    std::cin >> point;
     student.setPoint(point);
 }

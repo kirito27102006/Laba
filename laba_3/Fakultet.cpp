@@ -1,13 +1,14 @@
 #include "Fakultet.h"
 
-Fakultet::Fakultet():nameFakultet("UNDEFIND") {
+Fakultet::Fakultet() {
+    this->nameFakultet = "UNDEFIND";
 }
-string Fakultet::getNameFakultet() {
+std::string Fakultet::getNameFakultet() {
     return this->nameFakultet;
 }
-void Fakultet::setNameFakultet(string nameFakultet) {
-    this->nameFakultet = nameFakultet;
+void Fakultet::setNameFakultet(std::string const& nameOfFakultet) {
+    this->nameFakultet = nameOfFakultet;
 }
 void Fakultet::info() {
-    cout << "Факультет: " << getNameFakultet() << endl;
+    std::cout << "Факультет: " << getNameFakultet() << std::endl;
 }

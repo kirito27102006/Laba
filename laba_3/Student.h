@@ -2,16 +2,16 @@
 
 class Student : public Fakultet {
 private:
-    string name;
+    std::string name;
     int yearOfBirth;
     double point;
 public:
     Student();
-    string getName();
-    void setName(string name);
-    int getYearOfBirth();
+    std::string getName() const;
+    void setName(std::string const& name);
+    int getYearOfBirth() const;
     void setYearOfBirth(int yearOfBirth);
-    double getPoint();
+    double getPoint() const;
     void setPoint(double point);
     virtual void info() override;
 }; 

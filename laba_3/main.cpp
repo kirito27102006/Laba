@@ -7,8 +7,8 @@ int main()
     Fakultet fakultet;
     Student student;
     while (true) {
-        cout << "1 - Добавить студента\n2 - Вывести информацию о студенте\n3 - Выйти" << endl;
-        cin >> choice;
+        std::cout << "1 - Добавить студента\n2 - Вывести информацию о студенте\n3 - Выйти" << std::endl;
+        std::cin >> choice;
         if (choice == 1) {
             addStudent(fakultet, student);
         }
@@ -20,7 +20,7 @@ int main()
             return 0;
         }
         else {
-            cout << "Некорректный ввод!" << endl;
+            std::cout << "Некорректный ввод!" << std::endl;
         }
     }
 }
