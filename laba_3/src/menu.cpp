@@ -1,8 +1,6 @@
 #include "menu.h"
 
-void printInfo(Fakultet* fakultet) {
-    fakultet->info();
-}
+void printInfo(Fakultet* fakultet) { fakultet->info(); }
 
 void addStudent(Fakultet& fakultet, Student& student) {
     int year;
