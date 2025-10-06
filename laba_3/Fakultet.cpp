@@ -1,12 +1,15 @@
 #include "Fakultet.h"
 
 Fakultet::Fakultet() = default;
-std::string Fakultet::getNameFakultet() const { 
-	return this->nameFakultet; 
+
+std::string Fakultet::getNameFakultet() const {
+    return this->nameFakultet;
 }
-void Fakultet::setNameFakultet(std::string const& nameOfFakultet) {
-	this->nameFakultet = nameOfFakultet;
+
+void Fakultet::setNameFakultet(const std::string& nameOfFakultet) {
+    this->nameFakultet = nameOfFakultet;
 }
+
 void Fakultet::info() const {
-	std::cout << "Факультет: " << getNameFakultet() << std::endl;
+    std::cout << "Факультет: " << getNameFakultet() << std::endl;
 }

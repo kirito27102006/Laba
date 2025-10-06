@@ -1,5 +1,5 @@
-#include <windows.h>
-
+#include <Windows.h>  
+#include <iostream>
 #include "menu.h"
 
 int main() {
@@ -8,11 +8,12 @@ int main() {
     int choice;
     Fakultet fakultet;
     Student student;
+
     while (true) {
-        std::cout
-            << "1 - Добавить студента\n2 - Вывести информацию о студенте\n3 - Выйти"
+        std::cout << "1 - Добавить студента\n2 - Вывести информацию о студенте\n3 - Выйти"
             << std::endl;
         std::cin >> choice;
+
         if (choice == 1) {
             addStudent(fakultet, student);
         }

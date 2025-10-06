@@ -1,6 +1,10 @@
 #include "menu.h"
+#include <iostream>
+#include <string>
 
-void printInfo(Fakultet* fakultet) { fakultet->info(); }
+void printInfo(const Fakultet* fakultet) {
+    fakultet->info();
+}
 
 void addStudent(Fakultet& fakultet, Student& student) {
     int year;
