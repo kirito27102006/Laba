@@ -4,7 +4,7 @@ Student::Student() = default;
 std::string Student::getName() const { 
 	return this->name;
 }
-void Student::setName(std::string fio) { 
+void Student::setName(std::string const& fio) { 
 	this->name = fio; 
 }
 int Student::getYearOfBirth() const { 
@@ -19,7 +19,7 @@ double Student::getPoint() const {
 void Student::setPoint(double pointOfSemestr) { 
 	this->point = pointOfSemestr; 
 }
-void Student::info() {
+void Student::info() const{
 	std::cout << "ФИО: " << getName() << std::endl;
 	std::cout << "Год рождения: " << getYearOfBirth() << std::endl;
 	std::cout << "Средний балл: " << getPoint() << std::endl;
