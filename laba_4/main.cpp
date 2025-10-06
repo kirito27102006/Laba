@@ -1,29 +1,10 @@
-﻿#include <iostream>
+﻿#include "Human.h"
+#include "Mans.h"
+#include "Girls.h"
+#include "Menu.h"
+#include <iostream>
 
 using namespace std;
-
-class Human {
-public:
-    virtual void reaction() = 0;
-};
-
-class Girls : public Human {
-public:
-    void reaction() override {
-        cout << "Hello, girl!" << endl;
-    }
-};
-
-class Mans : public Human {
-public:
-    void reaction() override {
-        cout << "Hello, mans!" << endl;
-    }
-};
-
-void react(Human* human) {
-    human->reaction();
-}
 
 int main()
 {
