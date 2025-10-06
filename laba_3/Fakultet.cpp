@@ -1,7 +1,6 @@
 #include "Fakultet.h"
 
 Fakultet::Fakultet() {
-	this->nameFakultet = "UNDEFIND";
 }
 std::string Fakultet::getNameFakultet() const { 
 	return this->nameFakultet; 

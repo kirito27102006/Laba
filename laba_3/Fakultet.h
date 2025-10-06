@@ -3,7 +3,7 @@
 
 class Fakultet {
 private:
-	std::string nameFakultet;
+	std::string nameFakultet = "UNDEFIND";
 
 public:
 	Fakultet();
