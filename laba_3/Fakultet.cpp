@@ -1,7 +1,6 @@
 #include "Fakultet.h"
 
-Fakultet::Fakultet() {
-}
+Fakultet::Fakultet() = default;
 std::string Fakultet::getNameFakultet() const { 
 	return this->nameFakultet; 
 }

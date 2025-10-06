@@ -1,7 +1,6 @@
 #include "Student.h"
 
-Student::Student() {
-}
+Student::Student() = default;
 std::string Student::getName() const { 
 	return this->name;
 }
