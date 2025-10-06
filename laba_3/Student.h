@@ -14,5 +14,5 @@ public:
 	void setYearOfBirth(int yearOfBirth);
 	double getPoint() const;
 	void setPoint(double point);
-	virtual void info() override;
+	void info();
 };
