@@ -10,5 +10,5 @@ public:
     Fakultet();
     std::string getNameFakultet() const;
     void setNameFakultet(const std::string& nameOfFakultet);
-    virtual void info() const;  
+    virtual void info() const;
 };

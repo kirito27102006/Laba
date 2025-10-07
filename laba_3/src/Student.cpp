@@ -27,7 +27,7 @@ void Student::setPoint(double pointOfSemestr) {
 }
 
 void Student::info() const {
-    Fakultet::info();  
+    Fakultet::info();
     std::cout << "ФИО: " << getName() << std::endl;
     std::cout << "Год рождения: " << getYearOfBirth() << std::endl;
     std::cout << "Средний балл: " << getPoint() << std::endl;

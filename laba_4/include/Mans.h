@@ -2,6 +2,6 @@
 #include "Human.h"
 
 class Mans : public Human {
-public:
-    void reaction() override;
+ public:
+  void reaction() override;
 };
