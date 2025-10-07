@@ -9,6 +9,6 @@ private:
 public:
     Fakultet();
     std::string getNameFakultet() const;
-    void setNameFakultet(const std::string& nameOfFakultet);
+    void setNameFakultet(std::string_view nameOfFakultet);
     virtual void info() const;
 };

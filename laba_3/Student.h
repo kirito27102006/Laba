@@ -10,7 +10,7 @@ private:
 public:
     Student();
     std::string getName() const;
-    void setName(const std::string& name);
+    void setName(std::string_view name);
     int getYearOfBirth() const;
     void setYearOfBirth(int yearOfBirth);
     double getPoint() const;

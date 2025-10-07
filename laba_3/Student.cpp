@@ -6,7 +6,7 @@ std::string Student::getName() const {
     return this->name;
 }
 
-void Student::setName(const std::string& fio) {
+void Student::setName(std::string_view fio) {
     this->name = fio;
 }
 

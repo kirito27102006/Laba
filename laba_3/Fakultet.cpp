@@ -6,7 +6,7 @@ std::string Fakultet::getNameFakultet() const {
     return this->nameFakultet;
 }
 
-void Fakultet::setNameFakultet(const std::string& nameOfFakultet) {
+void Fakultet::setNameFakultet(std::string_view nameOfFakultet) {
     this->nameFakultet = nameOfFakultet;
 }
 

@@ -1,4 +1,4 @@
-#include <Windows.h>  
+#include <Windows.h>
 #include <iostream>
 #include "menu.h"
 
@@ -10,7 +10,8 @@ int main() {
     Student student;
 
     while (true) {
-        std::cout << "1 - Добавить студента\n2 - Вывести информацию о студенте\n3 - Выйти"
+        std::cout
+            << "1 - Добавить студента\n2 - Вывести информацию о студенте\n3 - Выйти"
             << std::endl;
         std::cin >> choice;
 

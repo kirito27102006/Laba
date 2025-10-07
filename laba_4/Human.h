@@ -2,6 +2,6 @@
 #include <iostream>
 
 class Human {
- public:
-  virtual void reaction() = 0;
+public:
+	virtual void reaction() = 0;
 };
