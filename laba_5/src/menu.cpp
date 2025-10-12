@@ -1,43 +1,43 @@
 #include "menu.h"
 
-void createArrayMenu(int& currentType, Array<int>*& arrayInt, Array<double>*& arrayDouble, Array<string>*& arrayString) {
+void createArrayMenu(int& currentType, Array<int>*& arrayInt, Array<double>*& arrayDouble, Array<std::string>*& arrayString) {
     int typeChoice;
     int size;
 
-    cout << "Select data type:\n1 - int\n2 - double\n3 - string" << endl;
-    cin >> typeChoice;
-    cout << "Enter the array size:" << endl;
-    cin >> size;
+    std::cout << "Select data type:\n1 - int\n2 - double\n3 - string" << std::endl;
+    std::cin >> typeChoice;
+    std::cout << "Enter the array size:" << std::endl;
+    std::cin >> size;
     cleanupArrays(arrayInt, arrayDouble, arrayString);
 
     if (typeChoice == 1) {
         arrayInt = new Array<int>(size);
         currentType = 1;
-        cout << "Created int array. Enter integer values:" << endl;
+        std::cout << "Created int array. Enter integer values:" << std::endl;
         arrayInt->createArray();
     }
     else if (typeChoice == 2) {
         arrayDouble = new Array<double>(size);
         currentType = 2;
-        cout << "Created double array. Enter double values:" << endl;
+        std::cout << "Created double array. Enter double values:" << std::endl;
         arrayDouble->createArray();
     }
     else if (typeChoice == 3) {
-        arrayString = new Array<string>(size);
+        arrayString = new Array<std::string>(size);
         currentType = 3;
-        cout << "Created string array. Enter string values:" << endl;
-        cin.ignore();
+        std::cout << "Created string array. Enter string values:" << std::endl;
+        std::cin.ignore();
         arrayString->createArray();
     }
     else {
-        cout << "Invalid type selection!" << endl;
+        std::cout << "Invalid type selection!" << std::endl;
         currentType = 0;
     }
 }
 
-void searchArrayMenu(int currentType, Array<int>* arrayInt, Array<double>* arrayDouble, Array<string>* arrayString) {
+void searchArrayMenu(int currentType, Array<int>* arrayInt, Array<double>* arrayDouble, Array<std::string>* arrayString) {
     if (currentType == 0) {
-        cout << "Please create an array first!" << endl;
+        std::cout << "Please create an array first!" << std::endl;
         return;
     }
 
@@ -50,19 +50,19 @@ void searchArrayMenu(int currentType, Array<int>* arrayInt, Array<double>* array
         index = arrayDouble->searchInArray();
     }
     else if (currentType == 3 && arrayString != nullptr) {
-        cin.ignore();
+        std::cin.ignore();
         index = arrayString->searchInArray();
     }
 
     if (index != -1) {
-        cout << "Match index: " << index << endl;
+        std::cout << "Match index: " << index << std::endl;
     }
     else {
-        cout << "Element not found" << endl;
+        std::cout << "Element not found" << std::endl;
     }
 }
 
-void cleanupArrays(Array<int>*& arrayInt, Array<double>*& arrayDouble, Array<string>*& arrayString) {
+void cleanupArrays(Array<int>*& arrayInt, Array<double>*& arrayDouble, Array<std::string>*& arrayString) {
     delete arrayInt;
     delete arrayDouble;
     delete arrayString;

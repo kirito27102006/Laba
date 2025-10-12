@@ -128,7 +128,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\Array.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\menu.cpp" />
   </ItemGroup>

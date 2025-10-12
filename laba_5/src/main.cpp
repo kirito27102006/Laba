@@ -5,11 +5,11 @@ int main() {
     int currentType = 0;
     Array<int>* arrayInt = nullptr;
     Array<double>* arrayDouble = nullptr;
-    Array<string>* arrayString = nullptr;
+    Array<std::string>* arrayString = nullptr;
 
     while (true) {
-        cout << "1 - Create Array\n2 - Search in an array\n3 - Exit" << endl;
-        cin >> choice;
+        std::cout << "1 - Create Array\n2 - Search in an array\n3 - Exit" << std::endl;
+        std::cin >> choice;
 
         if (choice == 1) {
             createArrayMenu(currentType, arrayInt, arrayDouble, arrayString);
@@ -22,7 +22,7 @@ int main() {
             break;
         }
         else {
-            cout << "Invalid choice!" << endl;
+            std::cout << "Invalid choice!" << std::endl;
         }
     }
     return 0;
