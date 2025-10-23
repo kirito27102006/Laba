@@ -46,7 +46,7 @@ void addStudent(Fakultet& fakultet, Student& student) {
     student.setPoint(point);
 }
 
-bool isRussianCP1251(const std::string& str) {
+bool isRussianCP1251(const std::string_view& str) {
     return std::any_of(str.begin(), str.end(), [](unsigned char c) {
         return (c >= 192 && c <= 255) && c != 215 && c != 247;
         });
