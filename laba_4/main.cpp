@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Girls.h"
+#include "Girl.h"
 #include "Human.h"
-#include "Mans.h"
+#include "Man.h"
 #include "Menu.h"
 
 using namespace std;
@@ -12,10 +12,10 @@ int main() {
     cout << "1 - Reaction to a man\n2 - Reaction to the girl\n3 - Exit" << endl;
     cin >> choice;
     if (choice == 1) {
-      Mans man;
+      Man man;
       react(&man);
     } else if (choice == 2) {
-      Girls girl;
+      Girl girl;
       react(&girl);
     } else if (choice == 3) {
       return 0;

@@ -1,7 +1,7 @@
 #pragma once
 #include "Human.h"
 
-class Mans : public Human {
+class Girl : public Human {
 public:
 	void reaction() override;
 };
