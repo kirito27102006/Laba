@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
-
+#include <ranges>
 
 void printInfo(const Fakultet* fakultet) {
     fakultet->info();
@@ -47,7 +47,7 @@ void addStudent(Fakultet& fakultet, Student& student) {
 }
 
 bool isRussianCP1251(const std::string_view& str) {
-    return std::any_of(str.begin(), str.end(), [](unsigned char c) {
+    return std::ranges::any_of(str, [](unsigned char c) {
         return (c >= 192 && c <= 255) && c != 215 && c != 247;
         });
 }
