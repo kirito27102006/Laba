@@ -1,6 +1,7 @@
 #include "menu.h"
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 
 void printInfo(const Fakultet* fakultet) {
@@ -46,10 +47,7 @@ void addStudent(Fakultet& fakultet, Student& student) {
 }
 
 bool isRussianCP1251(const std::string& str) {
-    for (unsigned char c : str) {
-        if ((c >= 192 && c <= 255) && c != 215 && c != 247) {
-            return true;
-        }
-    }
-    return false;
+    return std::any_of(str.begin(), str.end(), [](unsigned char c) {
+        return (c >= 192 && c <= 255) && c != 215 && c != 247;
+        });
 }

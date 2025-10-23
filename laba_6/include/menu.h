@@ -2,11 +2,11 @@
 #include "Student.h"
 
 
-class MyException : public std::exception {
+class MyException  : public std::exception  {
 private:
     std::string message;
 public:
-    MyException(const std::string& msg) : message(msg) {}
+    explicit MyException(const std::string& msg) : message(msg) {}
 
     const char* what() const noexcept override {
         return message.c_str();
