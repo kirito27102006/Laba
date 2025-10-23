@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+
 void printInfo(const Fakultet* fakultet) {
     fakultet->info();
 }
@@ -14,29 +15,27 @@ void addStudent(Fakultet& fakultet, Student& student) {
     std::cout << "¬ведите факультет: ";
     std::cin.ignore();
     getline(std::cin, nameFakultet);
-    try
-    {
+    try {
         if (!isRussianCP1251(nameFakultet)) {
-            throw "¬вод осуществлЄн не на русском €зыке!!!";
+            throw MyException("¬вод осуществлЄн не на русском €зыке!!!");
         }
         fakultet.setNameFakultet(nameFakultet);
     }
-    catch (const char* e)
-    {
-        std::cout << e << std::endl;
+    catch (const MyException& e) {
+        std::cout << e.what() << std::endl;
+        return;
     }
     std::cout << "‘»ќ студента: ";
     getline(std::cin, name);
-    try
-    {
+    try {
         if (!isRussianCP1251(name)) {
-            throw "¬вод осуществлЄн не на русском €зыке!!!";
+            throw MyException("¬вод осуществлЄн не на русском €зыке!!!");
         }
         student.setName(name);
     }
-    catch (const char* e)
-    {
-        std::cout << e << std::endl;
+    catch (const MyException& e) {
+        std::cout << e.what() << std::endl;
+        return;
     }
     std::cout << "¬ведите год рождени€ студента: ";
     std::cin >> year;
